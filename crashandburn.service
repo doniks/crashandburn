@@ -1,0 +1,15 @@
+# copy to /etc/systemd/system/crashandburn.service
+# systemctl enable crashandburn.service
+
+[Unit]
+Description=Provokes a kernel panic in order to fill ramoops
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/crashandburn.sh
+
+[Install]
+WantedBy=local-fs.target
+# WantedBy=multi-user.target
+
+
