@@ -11,4 +11,11 @@ To install:
  * copy the .service file into /etc/systemd/system/crashandburn.service 
  * copy the .sh file into /usr/bin/ 
  * systemctl enable crashandburn
+ * now reboot into your rootfs
+ * the led should emit a "breathe" when the service is started
+ * 60 seconds later the led should blink
+ * now the kernel should crash
+ * be prepared to bring the device into recovery now (some key combination)
+ * once in recovery, retrieve the log
+ * optionally, once you fixed your port, you could consider deleting the files, but that's totally up to you ;)
 
